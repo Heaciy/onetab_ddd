@@ -7,5 +7,5 @@ from domain.group.repository.po.group_po import Group  # 必须要import才能�
 if __name__ == "__main__":
     conf = Config()
     print(conf.SQLALCHEMY_DATABASE_URI)
-    engine = create_engine(conf.SQLALCHEMY_DATABASE_URI, pool_pre_ping=True)
+    engine = create_engine(str(conf.SQLALCHEMY_DATABASE_URI), pool_pre_ping=True)
     BaseModel.metadata.create_all(engine)

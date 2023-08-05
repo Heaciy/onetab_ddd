@@ -12,6 +12,7 @@ class GroupRepositoryImplement(GroupRepository):
             return po
         # FIXME: session没有close
         # TODO: 实现异步连接池
+        # TODO: 在接口层实现UOW的注入，UOW包括session和traceid，前后全局传递
 
 # class GroupRepository(ABC):
 #     @abstractmethod

@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+import uuid as uuid_
 from typing import List
 from datetime import datetime
 
@@ -15,6 +16,7 @@ class Link(BaseModel):
 
 class GroupForm(BaseModel):
     id: int = None
+    uuid: uuid_.UUID = None
     name: str = None
     links: List[Link] = None
     create_time: datetime = None
